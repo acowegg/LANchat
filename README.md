@@ -1,14 +1,13 @@
 # LANchat: Peer-to-Peer LAN Messenger
 An AIM-inspired chat program.
 
-PyAIM-LAN is a Python-based peer-to-peer (P2P) chat application designed for use on a Local Area Network (LAN). It features a graphical user interface (GUI) inspired by the classic AOL Instant Messenger, allowing users to discover each other on the network, engage in private one-on-one chats, and see online statuses.
+LANchat (formerly PyAIM-LAN) is a Python-based peer-to-peer chat app designed for use on a local network. Has an interface inspired by the classic AOL Instant Messenger.
 
-The entire application is contained within a single Python file (`lanchat.py`) and uses only standard Python libraries, ensuring maximum portability and ease of use.
-
+The entire application is contained within a single Python file (`lanchat.py`) packed to exe using PyInstaller. Uses only standard Python libraries.
 ## Features
 
 *   **Peer-to-Peer Communication:** No central server required after initial peer discovery. Communication is direct between clients.
-*   **LAN-Only:** Operates exclusively within your local network. No internet connection or external servers are used.
+*   **LAN-Only:** Operates exclusively within the local network of the default router. No internet connection or external servers are used.
 *   **AOL-Inspired GUI:**
     *   Contact list displaying online users with status indicators (Online/Away/Offline).
     *   Private chat windows for one-on-one conversations.
@@ -24,25 +23,19 @@ The entire application is contained within a single Python file (`lanchat.py`) a
 *   **Resilience:** If the initial "server node" (first peer) goes offline, the network aims to remain connected through other peers (though full mesh routing is not implemented; it relies on peers knowing about each other).
 *   **Message Notifications:** Basic window flashing for new messages in inactive chat windows.
 *   **Chat History:** Basic persistence of chat conversations to local files (in a `lan_chat_history` sub-directory).
-*   **Single File & Standard Libraries:** Easy to run and portable, requiring only a Python 3.8+ installation.
+*   **Single File & Standard Libraries:** Easy to run and portable executable package.
 
 ## Requirements
 
-*   Python 3.8 or newer.
-*   Standard Python libraries (socket, threading, tkinter, queue, json, time, datetime, sys, os). No external packages need to be installed.
+*   Python 3.8 or newer if you want to run the python code itself - otherwise, just Windows 11. 
+*   No external packages needed
 
 ## How to Run
 
-1.  Ensure you have Python 3.8+ installed.
-2.  Download the `lanchat.py` file (or the file containing the code).
-3.  Open a terminal or command prompt.
-4.  Navigate to the directory where you saved the file.
-5.  Run the application using:
-    ```bash
-    python lanchat.py
-    ```
-6.  You will be prompted to enter a display name.
-7.  The application will then attempt to discover other users on your LAN.
+1.  Download and run the `lanchat.exe` file in a Windows environment with networking.
+2.  You will be prompted to enter a display name. The application will then attempt to discover other users on your LAN.
+3.  Select an online user to open a chat session.
+
 
 **Note on Firewalls:**
 Your operating system's firewall might block the application's network communication (UDP for discovery, TCP for chat). You may need to allow Python or the specific script to communicate on the network if you encounter issues with discovery or connection.
@@ -78,7 +71,7 @@ Your operating system's firewall might block the application's network communica
 
 ## Contributing
 
-This project was developed as a single-file solution based on a specific prompt. While contributions are welcome, the primary constraint of keeping it within a single file using only standard libraries should be respected for any core changes.
+This project was developed as a single-file solution. While contributions are welcome, the primary constraint of keeping it within a single file using only standard libraries should be respected for any core changes.
 
 ---
 

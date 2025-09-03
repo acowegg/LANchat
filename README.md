@@ -3,7 +3,7 @@ An AIM-inspired chat program.
 
 LANchat (formerly PyAIM-LAN) is a Python-based peer-to-peer chat app designed for use on a local network. Has an interface inspired by the classic AOL Instant Messenger.
 
-The entire application is contained within a single Python file (`lanchat.py`) packed to exe using PyInstaller. Uses only standard Python libraries.
+The entire application is contained within a single Python file (`lanchat.py`) [packed to exe](https://github.com/acowegg/LANchat/releases) using PyInstaller. Uses only standard Python libraries.
 ## Features
 
 *   **Peer-to-Peer Communication:** No central server required after initial peer discovery. Communication is direct between clients.
@@ -32,7 +32,7 @@ The entire application is contained within a single Python file (`lanchat.py`) p
 
 ## How to Run
 
-1.  Download and run the `lanchat.exe` file in a Windows environment with networking.
+1.  Download and run the `lanchat.exe` from [releases](https://github.com/acowegg/LANchat/releases) file in a Windows environment with networking.
 2.  You will be prompted to enter a display name. The application will then attempt to discover other users on your LAN.
 3.  Select an online user to open a chat session.
 
